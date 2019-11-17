@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="ComingSoon" type="tns:ComingSoon"/>
+
+<xs:element name="ComingSoonResponse" type="tns:ComingSoonResponse"/>
+
+<xs:element name="NewRelease" type="tns:NewRelease"/>
+
+<xs:element name="NewReleaseResponse" type="tns:NewReleaseResponse"/>
+
+<xs:element name="getAllMovie" type="tns:getAllMovie"/>
+
+<xs:element name="getAllMovieResponse" type="tns:getAllMovieResponse"/>
+
+<xs:complexType name="ComingSoon">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ComingSoonResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movie">
+<xs:sequence>
+<xs:element name="categoryName" type="xs:string" minOccurs="0"/>
+<xs:element name="directors" type="xs:string" minOccurs="0"/>
+<xs:element name="duration" type="xs:int" minOccurs="0"/>
+<xs:element name="imageMovie" type="xs:string" minOccurs="0"/>
+<xs:element name="language" type="xs:string" minOccurs="0"/>
+<xs:element name="movieCategories" type="tns:movieCategory" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="movieGraphics" type="tns:movieGraphic" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="movieId" type="xs:string" minOccurs="0"/>
+<xs:element name="movieName" type="xs:string" minOccurs="0"/>
+<xs:element name="moviePrice" type="xs:int"/>
+<xs:element name="origin" type="xs:string" minOccurs="0"/>
+<xs:element name="overView" type="xs:string" minOccurs="0"/>
+<xs:element name="release" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="scenario" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:boolean" minOccurs="0"/>
+<xs:element name="ticketBooks" type="tns:ticketBook" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="videoTrailer" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movieCategory">
+<xs:sequence>
+<xs:element name="category" type="tns:category" minOccurs="0"/>
+<xs:element name="id" type="tns:movieCategoryId" minOccurs="0"/>
+<xs:element name="movie" type="tns:movie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="category">
+<xs:sequence>
+<xs:element name="categoryId" type="xs:string" minOccurs="0"/>
+<xs:element name="categoryName" type="xs:string" minOccurs="0"/>
+<xs:element name="movieCategories" type="tns:movieCategory" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movieCategoryId">
+<xs:sequence>
+<xs:element name="categoryId" type="xs:string" minOccurs="0"/>
+<xs:element name="movieId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movieGraphic">
+<xs:sequence>
+<xs:element name="graphic" type="tns:graphic" minOccurs="0"/>
+<xs:element name="id" type="tns:movieGraphicId" minOccurs="0"/>
+<xs:element name="movie" type="tns:movie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="graphic">
+<xs:sequence>
+<xs:element name="graphicId" type="xs:string" minOccurs="0"/>
+<xs:element name="graphicType" type="xs:string" minOccurs="0"/>
+<xs:element name="movieGraphics" type="tns:movieGraphic" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movieGraphicId">
+<xs:sequence>
+<xs:element name="graphicId" type="xs:string" minOccurs="0"/>
+<xs:element name="movieId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ticketBook">
+<xs:sequence>
+<xs:element name="movie" type="tns:movie" minOccurs="0"/>
+<xs:element name="payments" type="tns:payment" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="ticketAmount" type="xs:int" minOccurs="0"/>
+<xs:element name="ticketBookId" type="xs:string" minOccurs="0"/>
+<xs:element name="tickets" type="tns:ticket" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="payment">
+<xs:sequence>
+<xs:element name="bankCard" type="tns:bankCard" minOccurs="0"/>
+<xs:element name="paymentId" type="xs:string" minOccurs="0"/>
+<xs:element name="ticketBook" type="tns:ticketBook" minOccurs="0"/>
+<xs:element name="totalAmount" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bankCard">
+<xs:sequence>
+<xs:element name="bankCardId" type="xs:string" minOccurs="0"/>
+<xs:element name="cardNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="customer" type="tns:customer" minOccurs="0"/>
+<xs:element name="payments" type="tns:payment" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="bankCards" type="tns:bankCard" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+<xs:element name="customerName" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ticket">
+<xs:sequence>
+<xs:element name="dayss" type="tns:dayss" minOccurs="0"/>
+<xs:element name="hourss" type="tns:hourss" minOccurs="0"/>
+<xs:element name="ticketBook" type="tns:ticketBook" minOccurs="0"/>
+<xs:element name="ticketId" type="xs:string" minOccurs="0"/>
+<xs:element name="ticketPrice" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dayss">
+<xs:sequence>
+<xs:element name="dayId" type="xs:string" minOccurs="0"/>
+<xs:element name="dayss" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="tickets" type="tns:ticket" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hourss">
+<xs:sequence>
+<xs:element name="hoursId" type="xs:string" minOccurs="0"/>
+<xs:element name="hourss" type="xs:string" minOccurs="0"/>
+<xs:element name="tickets" type="tns:ticket" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllMovie">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NewRelease">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="NewReleaseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
