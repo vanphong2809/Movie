@@ -2,6 +2,8 @@ package entity;
 // Generated Nov 3, 2019 4:24:27 PM by Hibernate Tools 4.3.1
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,6 +16,9 @@ public class Dayss {
 
      private String dayId;
      private Date dayss;
+     private String date;
+     private String month;
+     private String year;
      private Set<Ticket> tickets = new HashSet<Ticket>(0);
 
     public Dayss() {
@@ -51,8 +56,29 @@ public class Dayss {
         this.tickets = tickets;
     }
 
+    public String getDate() {
+        return date;
+    }
 
+    public void setDate(String date) {
+        this.date = date;
+    }
 
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
 
 }
 

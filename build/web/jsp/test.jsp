@@ -8,27 +8,182 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/Movie/jsp/css/styles.css">
-        <link rel="stylesheet" href="/Movie/jsp/css/custom-cgv.css">
-        <script src="/Movie/jsp/js/jquery-1.10.2.js"></script>
-        <script id="" type="text/javascript">
-            !function (b, e, f, g, a, c, d) {
-                b.fbq || (a = b.fbq = function ()
-                {
-                    a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
-                }, b._fbq ||
-                        (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [],
-                        c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0],
-                        d.parentNode.insertBefore(c, d))
-            }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-            fbq("init", "266294360947453");
-            fbq("set", "agent", "tmgoogletagmanager", "266294360947453");
-            fbq("track", "PageView");
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>CGV Cinemas Vietnam | Thông tin - Lịch chiếu - Hệ thống rạp chiếu phim đẳng cấp CGV Cinemas Việt Nam</title>
+        <meta name="description" content="Rạp chiếu phim CGV là một trong những cụm rạp mang tiêu chuẩn quốc tế đầu tiên tại Việt Nam nhằm mang lại cho người hâm mộ điện ảnh chất lượng cao nhất. Trang web của chúng tôi cung cấp cho các bạn lich chiếu cập nhật tại tất cả các rạp cũng như thông tin chi tiết về bộ phim và trailer. Khi đăng ký thành viên StarCLUB, các bạn sẽ được hưởng những quyền lợi đặc biệt: sẽ là những người đầu tiên được cập nhật thông tin về các chương trình khuyến mãi nóng hổi, những quà tặng chỉ dành riêng cho quý thành viên">
+        <meta name="keywords" content="cgv, megastarmedia.net, cgv.vn, megastarcinemas.com, cgv media, cgv vietnam, CGV Cinemas, CGV Cinemas, cgv ho chi minh, movie, movies, films, film, rạp chiếu, ngôi sao, cinemas, cinema, trình chiếu, mẹ, trẻ em, gia đình, phim gia đình, sự kiện điện ảnh, ho chi minh city cinemas, saigon cinemas, viet nam, vietnam cinemas, hcmc cinemas, ha noi cinemas, hai phong cinemas, da nang cinemas, bien hoa cinemas, vincom city towers, hung vuong plaza, ct plaza, saigon paragon, ssp, thuy duong plaza, vinh trung plaza, co-pp mart, giải trí, vé xem phim, ticket, starclub, star club, m cinemas, vip, lịch chiếu phim, thời gian chiếu, xem trước, trailer, đối thủ, chiến thắng, công chiếu, bầu chọn, đạo diễn, lãnh địa nghệ thuật, dolby digital, wifi, 3-D, 3 D, 3D, Hollywood, blockbuster, 3D glasses, không gian 3 chiều, khong gian ba chieu">
+        <meta name="robots" content="INDEX,FOLLOW">
+        <meta property="fb:app_id" content="1711898955707825">
+        <link rel="stylesheet" type="text/css" href="/Movie/jsp/css/style.css" media="all">
+        <script type="text/javascript" async="" src="https://www.google.com/pagead/conversion_async.js"></script><script async="" src="//twa.netcoresmartech.com/webactivity/ADGMOT35CHFLVDHBJNIG50K96A9NS1B3N9HRR3983R33HRONTL6G.js"></script>
+        <script async="" src="//twa.netcoresmartech.com/webactivity/ADGMOT35CHFLVDHBJNIG50K96A9NS1B3N9HRR3983R33HRONTL6G.js"></script>
+        <script src="https://connect.facebook.net/signals/config/266294360947453?v=2.9.13&amp;r=stable" async=""></script>
+        <script src="https://connect.facebook.net/signals/config/1644759925761845?v=2.9.13&amp;r=stable" async=""></script>
+        <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+        <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+        <script async="" src="//cdnt.netcoresmartech.com/smartech_v3.0.js" id="smartech_v3"></script>
+        <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MSDTZ2C"></script>
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/prototype/prototype.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/lib/jquery/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/lib/jquery/noconflict.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/lib/ccard.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/prototype/validation.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/builder.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/effects.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/dragdrop.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/controls.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/slider.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/varien/js.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/varien/form.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/mage/translate.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/mage/cookies.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/js/google/ga.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/modernizr.custom.min.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/selectivizr.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/matchMedia.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/matchMedia.addListener.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/enquire.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/cgv.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/app.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/jquery.cycle2.min.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/jquery.cycle2.swipe.min.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/jquery.cycle2.carousel.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/slideshow.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/imagesloaded.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/enterprise/js/scripts.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/minicart.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/jquery.colorbox.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/enterprise/js/enterprise/catalogevent.js"></script>
+        <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/enterprise/js/enterprise/wishlist.js"></script>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600">
+        <link href="https://www.cgv.vn/default/newsoffer/rss/index/store_id/1/" title="News &amp; Offer" rel="alternate" type="application/rss+xml">
+        <!--[if  (lte IE 8) & (!IEMobile)]>
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/styles-ie8.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/enterprise/css/enterprise-ie8.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/madisonisland-ie8.css" media="all" />
+        <![endif]-->
+        <!--[if (gte IE 9) | (IEMobile)]><!-->
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/enterprise/css/enterprise.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/styles.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/colorbox.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/madisonisland.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/g-erp-cgv.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://www.cgv.vn/skin/frontend/cgv/default/css/custom-cgv.css" media="all">
+        <!--<![endif]-->
+
+        <script type="text/javascript">
+            //<![CDATA[
+            Mage.Cookies.path = '/';
+            Mage.Cookies.domain = '.cgv.vn';
+            //]]>
+        </script>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <script type="text/javascript">
+            //<![CDATA[
+            optionalZipCountries = ["HK", "IE", "MO", "PA"];
+            //]]>
         </script>
 
+        <script type="text/javascript">//<![CDATA[
+            var Translator = new Translate({"HTML tags are not allowed": "kh\u00f4ng ch\u1ea5p nh\u1eadn th\u1ebb HTML", "Please select an option.": "Ph\u1ea3i ch\u1ecdn m\u1ed9t gi\u00e1 tr\u1ecb.", "This is a required field.": "Ph\u1ea3i nh\u1eadp th\u00f4ng tin.", "Please enter a valid email address. For example johndoe@domain.com.": "Vui l\u00f2ng nh\u1eadp \u0111\u00fang \u0111\u1ecba ch\u1ec9 email. V\u00ed d\u1ee5: johndoe@domain.com", "Please enter 6 or more characters without leading or trailing spaces.": "Vui l\u00f2ng nh\u1eadp 6 k\u00fd t\u1ef1 tr\u1edf l\u00ean, kh\u00f4ng kho\u1ea3ng tr\u1eafng ho\u1eb7c d\u1ea5u c\u00e1ch d\u1eabn", "Please make sure your passwords match.": "Vui l\u00f2ng \u0111\u1ea3m b\u1ea3o m\u1eadt kh\u1ea9u ph\u00f9 h\u1ee3p.", "Please select one of the above options.": "Ph\u1ea3i ch\u1ecdn m\u1ed9t gi\u00e1 tr\u1ecb.", "Please select one of the options.": "Ph\u1ea3i ch\u1ecdn m\u1ed9t gi\u00e1 tr\u1ecb.", "This date is a required value.": "Ph\u1ea3i nh\u1eadp th\u00f4ng tin.", "Please enter a valid full date": "Vui l\u00f2ng nh\u1eadp \u0111\u00fang \u0111\u1ecbnh d\u1ea1ng ng\u00e0y sinh", "Complete": "Ho\u00e0n T\u1ea5t", "Please specify shipping method.": "B\u1ea1n ph\u1ea3i ch\u1ecdn ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n.", "Please specify payment method.": "B\u1ea1n ph\u1ea3i ch\u1ecdn ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n.", "Add to Cart": "\u0110\u1eb7t mua", "In Stock": "C\u00f2n h\u00e0ng", "Out of Stock": "H\u1ebft h\u00e0ng", "Save": "L\u01b0u l\u1ea1i", "Cancel": "H\u1ee7y", "Add to Wishlist": "L\u01b0u l\u1ea1i"});
+            //]]></script><script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-55803327-1', 'auto');
+                ga('send', 'pageview');
+        </script>
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MSDTZ2C');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Viet tracking -->
+        <script src="//cdnt.netcoresmartech.com/smartechclient.js"></script> 
+        <script>smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96A9NS1B3N9HRR3983R33HRONTL6G');
+            smartech('register', 'd072e0b5f30e44990b34dec62fde4fe1');
+            smartech('identify', '');
+            smartech('dispatch', 'Page Browse', {'url': "https://www.cgv.vn/"});</script> 
+            <link rel="manifest" href="//twa.netcoresmartech.com/manifest.json">
+        <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/880551924/?random=1574267974162&amp;cv=9&amp;fst=1574267974162&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=768&amp;u_w=1366&amp;u_ah=738&amp;u_aw=1366&amp;u_cd=24&amp;u_his=2&amp;u_tz=420&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2wgav9&amp;sendb=1&amp;ig=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.cgv.vn%2F&amp;ref=https%3A%2F%2Fwww.cgv.vn%2F&amp;tiba=CGV%20Cinemas%20Vietnam%20%7C%20Th%C3%B4ng%20tin%20-%20L%E1%BB%8Bch%20chi%E1%BA%BFu%20-%20H%E1%BB%87%20th%E1%BB%91ng%20r%E1%BA%A1p%20chi%E1%BA%BFu%20phim%20%C4%91%E1%BA%B3ng%20c%E1%BA%A5p%20CGV%20Cinemas%20Vi%E1%BB%87t%20Nam&amp;hn=www.google.com&amp;async=1&amp;rfmt=3&amp;fmt=4">
+        
+        </script>
+        <script>
+            function getSelectDay(id,dy) {
+			$j.ajax({
+				type: 'post',
+				url: 'getCity.htm',
+				data: 'movieId=' + id + 'dayId=' + dy,
+				beforeSend: function(){
+					$j('#loading-mask').show();
+					$j('dd.current .showtimes').empty();				
+				};
+			}).done(function(result) {			
+				$j('dd.current .showtimes').html(result);
+				togglecontent('cgv-schedule-popup .tabs-cgv-movie-cites');
+				togglecontent('cgv-schedule-popup .tabs-cgv-movie-type');
+				$j('#loading-mask').hide();
+			});
+		}
+        </script>
     </head>
     <body>
-        <div id="cboxLoadedContent" style="width: 1069px; overflow: auto; height: 3625px;"><div class="product-view quick-booking cgv-schedule-popup"><div class="product-collateral toggle-content tabs tabs-cgv-movie-view-date"><ul class="toggle-tabs"><li class="current"><div class="day" onclick="getSelectDay(19019700, '20191116');"><span>11</span><em>Sat</em><strong>16</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191117');"><span>11</span><em>Sun</em><strong>17</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191118');"><span>11</span><em>Mon</em><strong>18</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191119');"><span>11</span><em>Tue</em><strong>19</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191120');"><span>11</span><em>Wed</em><strong>20</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191121');"><span>11</span><em>Thu</em><strong>21</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191122');"><span>11</span><em>Fri</em><strong>22</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191123');"><span>11</span><em>Sat</em><strong>23</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191124');"><span>11</span><em>Sun</em><strong>24</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191125');"><span>11</span><em>Mon</em><strong>25</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191126');"><span>11</span><em>Tue</em><strong>26</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191127');"><span>11</span><em>Wed</em><strong>27</strong></div></li><li><div class="day" onclick="getSelectDay(19019700, '20191128');"><span>11</span><em>Thu</em><strong>28</strong></div></li><li class="last"><div class="day" onclick="getSelectDay(19019700, '20191129');"><span>11</span><em>Fri</em><strong>29</strong></div></li></ul><dl id="collateral-tabs" class="collateral-tabs"><dt class="tab current"><div class="day" onclick="getSelectDay(19019700, '20191116');"><span>11</span><em>Sat</em><strong>16</strong></div></dt><dd class="tab-container current"><div class="tab-content showtimes">	<div class="product-collateral toggle-content tabs tabs-cgv-movie-cites">
+        <div id="cboxLoadedContent" style="width: 1069px; overflow: auto; height: 3625px;">
+            <div class="product-view quick-booking cgv-schedule-popup">
+                <div class="product-collateral toggle-content tabs tabs-cgv-movie-view-date">
+                    <ul class="toggle-tabs">
+                        <li class="current">
+                            <div class="day" onclick="getSelectDay(19019700, '20191116');">
+                                <span>11</span>
+                                <em>Sat</em>
+                                <strong>16</strong>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="day" onclick="getSelectDay(19019700, '20191117');">
+                                <span>11</span>
+                                <em>Sun</em>
+                                <strong>17</strong>
+                            </div>
+                        </li>
+                       
+                        <li class="last">
+                            <div class="day" onclick="getSelectDay(19019700, '20191129');">
+                                <span>11</span>
+                                <em>Fri</em>
+                                <strong>29</strong>
+                            </div>
+                        </li>
+                    </ul>
+                    <dl id="collateral-tabs" class="collateral-tabs">
+                        <dt class="tab current">
+                            <div class="day" onclick="getSelectDay(19019700, '20191116');">
+                                <span>11</span>
+                                <em>Sat</em>
+                                <strong>16</strong>
+                            </div>
+                        </dt>
+                        <dd class="tab-container current">
+                            <div class="tab-content showtimes">
+                                <div class="product-collateral toggle-content tabs tabs-cgv-movie-cites">
                                     <ul class="toggle-tabs"><li class="current">
                                             <span>Hồ Chí Minh</span>
                                         </li><li>

@@ -3,6 +3,7 @@ package ws;
 
 import java.util.List;
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
@@ -27,6 +28,45 @@ public interface WSMovie {
     /**
      * 
      * @return
+     *     returns java.util.List<ws.Category>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCategory", targetNamespace = "http://ws/", className = "ws.GetCategory")
+    @ResponseWrapper(localName = "getCategoryResponse", targetNamespace = "http://ws/", className = "ws.GetCategoryResponse")
+    @Action(input = "http://ws/WSMovie/getCategoryRequest", output = "http://ws/WSMovie/getCategoryResponse")
+    public List<Category> getCategory();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Movie>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMovieByCategory", targetNamespace = "http://ws/", className = "ws.GetMovieByCategory")
+    @ResponseWrapper(localName = "getMovieByCategoryResponse", targetNamespace = "http://ws/", className = "ws.GetMovieByCategoryResponse")
+    @Action(input = "http://ws/WSMovie/getMovieByCategoryRequest", output = "http://ws/WSMovie/getMovieByCategoryResponse")
+    public List<Movie> getMovieByCategory(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ws.Movie>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllMovie", targetNamespace = "http://ws/", className = "ws.GetAllMovie")
+    @ResponseWrapper(localName = "getAllMovieResponse", targetNamespace = "http://ws/", className = "ws.GetAllMovieResponse")
+    @Action(input = "http://ws/WSMovie/getAllMovieRequest", output = "http://ws/WSMovie/getAllMovieResponse")
+    public List<Movie> getAllMovie();
+
+    /**
+     * 
+     * @return
      *     returns java.util.List<ws.Movie>
      */
     @WebMethod(operationName = "NewRelease")
@@ -35,6 +75,36 @@ public interface WSMovie {
     @ResponseWrapper(localName = "NewReleaseResponse", targetNamespace = "http://ws/", className = "ws.NewReleaseResponse")
     @Action(input = "http://ws/WSMovie/NewReleaseRequest", output = "http://ws/WSMovie/NewReleaseResponse")
     public List<Movie> newRelease();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Dayss>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getDayByMovie", targetNamespace = "http://ws/", className = "ws.GetDayByMovie")
+    @ResponseWrapper(localName = "getDayByMovieResponse", targetNamespace = "http://ws/", className = "ws.GetDayByMovieResponse")
+    @Action(input = "http://ws/WSMovie/getDayByMovieRequest", output = "http://ws/WSMovie/getDayByMovieResponse")
+    public List<Dayss> getDayByMovie(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertMovie", targetNamespace = "http://ws/", className = "ws.InsertMovie")
+    @ResponseWrapper(localName = "insertMovieResponse", targetNamespace = "http://ws/", className = "ws.InsertMovieResponse")
+    @Action(input = "http://ws/WSMovie/insertMovieRequest", output = "http://ws/WSMovie/insertMovieResponse")
+    public boolean insertMovie(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Movie arg0);
 
     /**
      * 
@@ -50,14 +120,86 @@ public interface WSMovie {
 
     /**
      * 
+     * @param arg0
      * @return
      *     returns java.util.List<ws.Movie>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllMovie", targetNamespace = "http://ws/", className = "ws.GetAllMovie")
-    @ResponseWrapper(localName = "getAllMovieResponse", targetNamespace = "http://ws/", className = "ws.GetAllMovieResponse")
-    @Action(input = "http://ws/WSMovie/getAllMovieRequest", output = "http://ws/WSMovie/getAllMovieResponse")
-    public List<Movie> getAllMovie();
+    @RequestWrapper(localName = "searchMovie", targetNamespace = "http://ws/", className = "ws.SearchMovie")
+    @ResponseWrapper(localName = "searchMovieResponse", targetNamespace = "http://ws/", className = "ws.SearchMovieResponse")
+    @Action(input = "http://ws/WSMovie/searchMovieRequest", output = "http://ws/WSMovie/searchMovieResponse")
+    public List<Movie> searchMovie(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.Ticketing>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTicketing", targetNamespace = "http://ws/", className = "ws.GetTicketing")
+    @ResponseWrapper(localName = "getTicketingResponse", targetNamespace = "http://ws/", className = "ws.GetTicketingResponse")
+    @Action(input = "http://ws/WSMovie/getTicketingRequest", output = "http://ws/WSMovie/getTicketingResponse")
+    public List<Ticketing> getTicketing(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<ws.City>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCityByDay", targetNamespace = "http://ws/", className = "ws.GetCityByDay")
+    @ResponseWrapper(localName = "getCityByDayResponse", targetNamespace = "http://ws/", className = "ws.GetCityByDayResponse")
+    @Action(input = "http://ws/WSMovie/getCityByDayRequest", output = "http://ws/WSMovie/getCityByDayResponse")
+    public List<City> getCityByDay(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns ws.Movie
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMovieById", targetNamespace = "http://ws/", className = "ws.GetMovieById")
+    @ResponseWrapper(localName = "getMovieByIdResponse", targetNamespace = "http://ws/", className = "ws.GetMovieByIdResponse")
+    @Action(input = "http://ws/WSMovie/getMovieByIdRequest", output = "http://ws/WSMovie/getMovieByIdResponse")
+    public Movie getMovieById(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateMovie", targetNamespace = "http://ws/", className = "ws.UpdateMovie")
+    @ResponseWrapper(localName = "updateMovieResponse", targetNamespace = "http://ws/", className = "ws.UpdateMovieResponse")
+    @Action(input = "http://ws/WSMovie/updateMovieRequest", output = "http://ws/WSMovie/updateMovieResponse")
+    public boolean updateMovie(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Movie arg0);
 
 }

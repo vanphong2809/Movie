@@ -4,17 +4,17 @@
 <xsd:import namespace="http://ws/" schemaLocation="http://localhost:8080/WebService/WSMovie?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="NewRelease">
-<part name="parameters" element="tns:NewRelease"/>
+<message name="getCategory">
+<part name="parameters" element="tns:getCategory"/>
 </message>
-<message name="NewReleaseResponse">
-<part name="parameters" element="tns:NewReleaseResponse"/>
+<message name="getCategoryResponse">
+<part name="parameters" element="tns:getCategoryResponse"/>
 </message>
-<message name="ComingSoon">
-<part name="parameters" element="tns:ComingSoon"/>
+<message name="getMovieByCategory">
+<part name="parameters" element="tns:getMovieByCategory"/>
 </message>
-<message name="ComingSoonResponse">
-<part name="parameters" element="tns:ComingSoonResponse"/>
+<message name="getMovieByCategoryResponse">
+<part name="parameters" element="tns:getMovieByCategoryResponse"/>
 </message>
 <message name="getAllMovie">
 <part name="parameters" element="tns:getAllMovie"/>
@@ -22,23 +22,158 @@
 <message name="getAllMovieResponse">
 <part name="parameters" element="tns:getAllMovieResponse"/>
 </message>
+<message name="NewRelease">
+<part name="parameters" element="tns:NewRelease"/>
+</message>
+<message name="NewReleaseResponse">
+<part name="parameters" element="tns:NewReleaseResponse"/>
+</message>
+<message name="getDayByMovie">
+<part name="parameters" element="tns:getDayByMovie"/>
+</message>
+<message name="getDayByMovieResponse">
+<part name="parameters" element="tns:getDayByMovieResponse"/>
+</message>
+<message name="insertMovie">
+<part name="parameters" element="tns:insertMovie"/>
+</message>
+<message name="insertMovieResponse">
+<part name="parameters" element="tns:insertMovieResponse"/>
+</message>
+<message name="ComingSoon">
+<part name="parameters" element="tns:ComingSoon"/>
+</message>
+<message name="ComingSoonResponse">
+<part name="parameters" element="tns:ComingSoonResponse"/>
+</message>
+<message name="searchMovie">
+<part name="parameters" element="tns:searchMovie"/>
+</message>
+<message name="searchMovieResponse">
+<part name="parameters" element="tns:searchMovieResponse"/>
+</message>
+<message name="getTicketing">
+<part name="parameters" element="tns:getTicketing"/>
+</message>
+<message name="getTicketingResponse">
+<part name="parameters" element="tns:getTicketingResponse"/>
+</message>
+<message name="getCityByDay">
+<part name="parameters" element="tns:getCityByDay"/>
+</message>
+<message name="getCityByDayResponse">
+<part name="parameters" element="tns:getCityByDayResponse"/>
+</message>
+<message name="getMovieById">
+<part name="parameters" element="tns:getMovieById"/>
+</message>
+<message name="getMovieByIdResponse">
+<part name="parameters" element="tns:getMovieByIdResponse"/>
+</message>
+<message name="updateMovie">
+<part name="parameters" element="tns:updateMovie"/>
+</message>
+<message name="updateMovieResponse">
+<part name="parameters" element="tns:updateMovieResponse"/>
+</message>
 <portType name="WSMovie">
-<operation name="NewRelease">
-<input wsam:Action="http://ws/WSMovie/NewReleaseRequest" message="tns:NewRelease"/>
-<output wsam:Action="http://ws/WSMovie/NewReleaseResponse" message="tns:NewReleaseResponse"/>
+<operation name="getCategory">
+<input wsam:Action="http://ws/WSMovie/getCategoryRequest" message="tns:getCategory"/>
+<output wsam:Action="http://ws/WSMovie/getCategoryResponse" message="tns:getCategoryResponse"/>
 </operation>
-<operation name="ComingSoon">
-<input wsam:Action="http://ws/WSMovie/ComingSoonRequest" message="tns:ComingSoon"/>
-<output wsam:Action="http://ws/WSMovie/ComingSoonResponse" message="tns:ComingSoonResponse"/>
+<operation name="getMovieByCategory">
+<input wsam:Action="http://ws/WSMovie/getMovieByCategoryRequest" message="tns:getMovieByCategory"/>
+<output wsam:Action="http://ws/WSMovie/getMovieByCategoryResponse" message="tns:getMovieByCategoryResponse"/>
 </operation>
 <operation name="getAllMovie">
 <input wsam:Action="http://ws/WSMovie/getAllMovieRequest" message="tns:getAllMovie"/>
 <output wsam:Action="http://ws/WSMovie/getAllMovieResponse" message="tns:getAllMovieResponse"/>
 </operation>
+<operation name="NewRelease">
+<input wsam:Action="http://ws/WSMovie/NewReleaseRequest" message="tns:NewRelease"/>
+<output wsam:Action="http://ws/WSMovie/NewReleaseResponse" message="tns:NewReleaseResponse"/>
+</operation>
+<operation name="getDayByMovie">
+<input wsam:Action="http://ws/WSMovie/getDayByMovieRequest" message="tns:getDayByMovie"/>
+<output wsam:Action="http://ws/WSMovie/getDayByMovieResponse" message="tns:getDayByMovieResponse"/>
+</operation>
+<operation name="insertMovie">
+<input wsam:Action="http://ws/WSMovie/insertMovieRequest" message="tns:insertMovie"/>
+<output wsam:Action="http://ws/WSMovie/insertMovieResponse" message="tns:insertMovieResponse"/>
+</operation>
+<operation name="ComingSoon">
+<input wsam:Action="http://ws/WSMovie/ComingSoonRequest" message="tns:ComingSoon"/>
+<output wsam:Action="http://ws/WSMovie/ComingSoonResponse" message="tns:ComingSoonResponse"/>
+</operation>
+<operation name="searchMovie">
+<input wsam:Action="http://ws/WSMovie/searchMovieRequest" message="tns:searchMovie"/>
+<output wsam:Action="http://ws/WSMovie/searchMovieResponse" message="tns:searchMovieResponse"/>
+</operation>
+<operation name="getTicketing">
+<input wsam:Action="http://ws/WSMovie/getTicketingRequest" message="tns:getTicketing"/>
+<output wsam:Action="http://ws/WSMovie/getTicketingResponse" message="tns:getTicketingResponse"/>
+</operation>
+<operation name="getCityByDay">
+<input wsam:Action="http://ws/WSMovie/getCityByDayRequest" message="tns:getCityByDay"/>
+<output wsam:Action="http://ws/WSMovie/getCityByDayResponse" message="tns:getCityByDayResponse"/>
+</operation>
+<operation name="getMovieById">
+<input wsam:Action="http://ws/WSMovie/getMovieByIdRequest" message="tns:getMovieById"/>
+<output wsam:Action="http://ws/WSMovie/getMovieByIdResponse" message="tns:getMovieByIdResponse"/>
+</operation>
+<operation name="updateMovie">
+<input wsam:Action="http://ws/WSMovie/updateMovieRequest" message="tns:updateMovie"/>
+<output wsam:Action="http://ws/WSMovie/updateMovieResponse" message="tns:updateMovieResponse"/>
+</operation>
 </portType>
 <binding name="WSMoviePortBinding" type="tns:WSMovie">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="getCategory">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getMovieByCategory">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getAllMovie">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="NewRelease">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getDayByMovie">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="insertMovie">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -56,7 +191,43 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getAllMovie">
+<operation name="searchMovie">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getTicketing">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getCityByDay">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getMovieById">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="updateMovie">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

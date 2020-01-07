@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
         <delete dir="${build.generated.dir}/jax-wsCache/WSMovie"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-WSMovie"/>
+    <target name="wsimport-client-WSCustomer" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WSCustomer"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WSCustomer" destdir="${build.generated.dir}/jax-wsCache/WSCustomer" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/WSCustomer/wsdl/localhost_8080/WebService/WSCustomer.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WebService/WSCustomer?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/WSCustomer/wsdl/localhost_8080/WebService/WSCustomer.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WSCustomer"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WSCustomer">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WSCustomer" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/WSCustomer"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-WSMovie, wsimport-client-WSCustomer"/>
 </project>

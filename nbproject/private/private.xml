@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/movie_details.jsp</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/src/java/controller/MovieController.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/css/fonts.css</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/css/bootstrap.css</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/booking.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/admin/Movie.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/Bill.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/src/java/controller/LoginController.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/header.jsp</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Movie/web/jsp/index.jsp</file>
         </group>
     </open-files>

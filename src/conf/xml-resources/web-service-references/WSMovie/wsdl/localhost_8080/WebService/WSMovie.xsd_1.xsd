@@ -12,6 +12,42 @@
 
 <xs:element name="getAllMovieResponse" type="tns:getAllMovieResponse"/>
 
+<xs:element name="getCategory" type="tns:getCategory"/>
+
+<xs:element name="getCategoryResponse" type="tns:getCategoryResponse"/>
+
+<xs:element name="getCityByDay" type="tns:getCityByDay"/>
+
+<xs:element name="getCityByDayResponse" type="tns:getCityByDayResponse"/>
+
+<xs:element name="getDayByMovie" type="tns:getDayByMovie"/>
+
+<xs:element name="getDayByMovieResponse" type="tns:getDayByMovieResponse"/>
+
+<xs:element name="getMovieByCategory" type="tns:getMovieByCategory"/>
+
+<xs:element name="getMovieByCategoryResponse" type="tns:getMovieByCategoryResponse"/>
+
+<xs:element name="getMovieById" type="tns:getMovieById"/>
+
+<xs:element name="getMovieByIdResponse" type="tns:getMovieByIdResponse"/>
+
+<xs:element name="getTicketing" type="tns:getTicketing"/>
+
+<xs:element name="getTicketingResponse" type="tns:getTicketingResponse"/>
+
+<xs:element name="insertMovie" type="tns:insertMovie"/>
+
+<xs:element name="insertMovieResponse" type="tns:insertMovieResponse"/>
+
+<xs:element name="searchMovie" type="tns:searchMovie"/>
+
+<xs:element name="searchMovieResponse" type="tns:searchMovieResponse"/>
+
+<xs:element name="updateMovie" type="tns:updateMovie"/>
+
+<xs:element name="updateMovieResponse" type="tns:updateMovieResponse"/>
+
 <xs:complexType name="ComingSoon">
 <xs:sequence/>
 </xs:complexType>
@@ -125,6 +161,7 @@
 <xs:element name="customerId" type="xs:string" minOccurs="0"/>
 <xs:element name="customerName" type="xs:string" minOccurs="0"/>
 <xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
 <xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
@@ -141,9 +178,12 @@
 
 <xs:complexType name="dayss">
 <xs:sequence>
+<xs:element name="day" type="xs:string" minOccurs="0"/>
 <xs:element name="dayId" type="xs:string" minOccurs="0"/>
 <xs:element name="dayss" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="month" type="xs:string" minOccurs="0"/>
 <xs:element name="tickets" type="tns:ticket" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="year" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -152,6 +192,28 @@
 <xs:element name="hoursId" type="xs:string" minOccurs="0"/>
 <xs:element name="hourss" type="xs:string" minOccurs="0"/>
 <xs:element name="tickets" type="tns:ticket" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategory">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:category" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchMovie">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movie" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -172,6 +234,116 @@
 <xs:complexType name="NewReleaseResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:movie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCityByDay">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCityByDayResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:city" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="city">
+<xs:sequence>
+<xs:element name="cinemas" type="tns:cinema" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="cityId" type="xs:string" minOccurs="0"/>
+<xs:element name="cityName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cinema">
+<xs:sequence>
+<xs:element name="cinemaId" type="xs:string" minOccurs="0"/>
+<xs:element name="cinemaName" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="tns:city" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMovieById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMovieByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTicketing">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTicketingResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ticketing" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ticketing">
+<xs:sequence>
+<xs:element name="cinemaName" type="xs:string" minOccurs="0"/>
+<xs:element name="hour" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDayByMovie">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDayByMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dayss" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMovieByCategory">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMovieByCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movie" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertMovie">
+<xs:sequence>
+<xs:element name="arg0" type="tns:movie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateMovie">
+<xs:sequence>
+<xs:element name="arg0" type="tns:movie" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateMovieResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>
